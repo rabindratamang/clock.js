@@ -1,4 +1,4 @@
-function ClockJs({containerId}){
+function Clock({containerId}){
     let container = document.querySelector(`#${containerId}`);
     if(this.createClockElements(()=>appendElems(container,this.clockFace))){
         this.styleClockElements();
@@ -6,7 +6,7 @@ function ClockJs({containerId}){
     }
 }
 
-ClockJs.prototype.createClockElements = function(callback){
+Clock.prototype.createClockElements = function(callback){
     this.clockFace = createElement();
     this.clockCentre = createElement();
     this.secondHand = createElement();
@@ -21,7 +21,7 @@ ClockJs.prototype.createClockElements = function(callback){
     return true
 }
 
-ClockJs.prototype.styleClockElements = function(){
+Clock.prototype.styleClockElements = function(){
     styleElement(this.clockFace,{
         "margin": "100px auto",
         "position": "relative",
@@ -80,7 +80,7 @@ ClockJs.prototype.styleClockElements = function(){
     })
 }
 
-ClockJs.prototype.setDate = function(){
+Clock.prototype.setDate = function(){
     const now = new Date();
     const seconds = now.getSeconds();
     const minutes = now.getMinutes();
@@ -96,7 +96,7 @@ ClockJs.prototype.setDate = function(){
     this.hourHand.style.transform = `rotate(${hourDegree}deg)`
 }
 
-ClockJs.prototype.init = function(){
+Clock.prototype.init = function(){
     setInterval(this.setDate.bind(this),1000)
 }
 
