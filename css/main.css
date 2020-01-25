@@ -1,0 +1,50 @@
+body{
+    background-color: gray;
+}
+
+.clock-face{
+    margin: 100px auto;
+    position: relative;
+    border: 10px solid white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: lightblue;
+    box-shadow: 5px 10px 18px black;
+}
+
+.clock-centre{
+    position: absolute;
+    top: 48%;
+    right: 140px;
+    background: black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+
+.hand{
+    width: 45%;
+    right: 50%;
+    position: absolute;
+    background: black;
+    height: 6px;
+    top: 50%;
+    transform-origin: 100%; /**edge of x-axis by default it's 50%**/ 
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand{
+    width: 59%;
+    top: 51%;
+    right: 38%;
+    height: 3px;
+    transform-origin: 80%; /**edge of x-axis by default it's 50%**/
+}
+
+.hour-hand{
+    width: 25%;
+    height: 9px;
+}
