@@ -9,17 +9,17 @@
 
 </head>
 <body>
-    <div class="clock">
-        <div class="clock-face">
-            <div class="clock-centre"></div>
-            <div class="hand hour-hand"></div>
-            <div class="hand minute-hand"></div>
-            <div class="hand second-hand"></div>
-        </div>
+    <div id="clock1"></div>
+    <div class="footer">
+        <h4>Clock.js</h4>
     </div>
-
-    <script src="./js/main.js"></script>
-
+    <script src="./js/utils.js"></script>
+    <script src="./js/clock.js"></script>
+    <script>
+        new ClockJs({
+            containerId: 'clock1'
+        });
+    </script>
 </body>
 </html>
 

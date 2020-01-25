@@ -2,6 +2,18 @@ body{
     background-color: gray;
 }
 
+h4{
+    font-size: 40px;
+}
+
+span{
+    font-size: 20px;  
+}
+.footer{
+    text-align: center;
+    color: white;
+}
+
 .clock-face{
     margin: 100px auto;
     position: relative;
