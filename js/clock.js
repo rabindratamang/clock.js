@@ -1,3 +1,7 @@
+/**
+ * Function clock object
+ * @param {*}
+ */
 function Clock({containerId}){
     let container = document.querySelector(`#${containerId}`);
     if(this.createClockElements(()=>appendElems(container,this.clockFace))){
